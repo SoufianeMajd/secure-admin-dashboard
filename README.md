@@ -1,6 +1,6 @@
 # Secure Web Administrative Dashboard 🛡️
 
-A robust, full-stack administrative dashboard built with **Next.js** on the frontend and **Flask** on the backend. This project provides a secure, Role-Based Access Control (RBAC) environment for managing e-commerce data such as products, orders, and users.
+A robust, modern administrative dashboard built with **Next.js**. This frontend project provides a secure, Role-Based Access Control (RBAC) environment for managing e-commerce data such as products, orders, and users.
 
 ![Dashboard Overview](public/screenshot.png)
 
@@ -17,13 +17,12 @@ A robust, full-stack administrative dashboard built with **Next.js** on the fron
 ## 🚀 Tech Stack
 
 - **Frontend**: Next.js 14, React, Tailwind CSS, Recharts, Lucide Icons.
-- **Backend**: Flask, SQLite3, PyJWT, bcrypt.
+- **Backend**: *Bring your own REST API (BYO-API).*
 
 ## ⚙️ Getting Started
 
 ### Prerequisites
 - Node.js (v18+)
-- Python 3.8+
 
 ### Installation
 
@@ -66,8 +65,7 @@ To connect your API:
 
 This project implements multiple layers of security:
 - **Frontend Security**: The `useAuth` hook validates the user's session and type on every protected route. If the API returns a `401 Unauthorized` (e.g., expired token), the user is securely logged out.
-- **Backend Security**: All sensitive endpoints (e.g., `/api/products`, `/api/orders`) are protected by a `@token_required` decorator that validates the JWT.
-- **Database Security**: All SQL queries use parameterized statements to prevent SQL Injection attacks.
+- **API Communication**: The dashboard automatically injects your JWT token into the `Authorization` header for all requests to protected routes.
 
 ## 📄 License
 
