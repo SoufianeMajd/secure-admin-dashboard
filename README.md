@@ -50,17 +50,17 @@ A robust, full-stack administrative dashboard built with **Next.js** on the fron
    ```
    *The dashboard will be available at `http://localhost:3000`.*
 
-### Backend Setup (Requires the `PROJECT` directory)
-1. Navigate to your backend directory.
-2. Install Python dependencies:
-   ```bash
-   pip install flask flask-cors bcrypt PyJWT requests beautifulsoup4
-   ```
-3. Start the Flask server:
-   ```bash
-   python main.py
-   ```
-   *The API will be available at `http://localhost:5000`.*
+### Backend API Requirements
+
+This frontend is designed to work with a backend API. Since the backend repository is not included here, you will need to point the dashboard to your own REST API. 
+
+The dashboard expects the following API structure:
+- **Authentication**: JWT-based login (e.g., `POST /api/login`) returning `{ access_token: "..." }`.
+- **Data Endpoints**: Protected endpoints (e.g., `GET /api/products`, `GET /api/orders`, `GET /api/users`) returning JSON arrays.
+
+To connect your API:
+1. Open your `.env.local` file.
+2. Update the `NEXT_PUBLIC_API_URL` to point to your backend (e.g., `https://api.yourdomain.com`).
 
 ## 🔒 Security Measures
 
