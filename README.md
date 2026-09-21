@@ -38,7 +38,13 @@ A robust, full-stack administrative dashboard built with **Next.js** on the fron
    npm install
    ```
 
-3. **Start the frontend development server**
+3. **Set up environment variables**
+   Copy the example environment file and configure it if necessary (it defaults to `http://localhost:5000` for the backend):
+   ```bash
+   cp .env.example .env.local
+   ```
+
+4. **Start the frontend development server**
    ```bash
    npm run dev
    ```
