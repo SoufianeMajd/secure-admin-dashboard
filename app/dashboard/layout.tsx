@@ -74,7 +74,7 @@ export default function DashboardLayout({
           <div className="w-8 h-8 rounded bg-indigo-500 flex items-center justify-center mr-3">
             <Activity className="w-5 h-5 text-white" />
           </div>
-          <span className="text-lg font-semibold tracking-wide">Medusa Admin</span>
+          <span className="text-lg font-semibold tracking-wide">Dashboard Admin</span>
         </div>
 
         {/* Navigation */}
